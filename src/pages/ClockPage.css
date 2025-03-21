@@ -1,0 +1,9 @@
+.clock-page {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  background-color: black;
+  color: white;
+  }
+  

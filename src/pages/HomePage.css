@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensures full viewport coverage */
+  width: 100%;
+  overflow: hidden; /* Prevents scrolling */
+  background-color: black;
+  color: white;
+}
+
+.container {
+  height: 100vh; /* Ensures full viewport coverage */
+  width: 100vw;
+  display: grid;
+  grid-template-columns: minmax(10px, 100px) 1fr minmax(225px, 300px);
+  grid-template-rows: 225px 1fr; /* Allows content to define row height */
+  grid-template-areas: 
+      "nav title days-together"
+      "nav main plans";
+  gap: 10px;
+  padding: 10px;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px cyan, 0 0 10px blue; }
+  50% { box-shadow: 0 0 10px cyan, 0 0 20px blue; }
+  100% { box-shadow: 0 0 5px cyan, 0 0 10px blue; }
+}
+
+.nav {
+  grid-area: nav;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  
+  /* Glow Effect */
+  border: 3px solid cyan;
+  animation: glow 2s infinite alternate;
+}
+
+
+.title {
+  grid-area: title;
+}
+
+.days-together {
+  grid-area: days-together;
+}
+
+.main {
+  grid-area: main;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  
+  /* Glow Effect */
+  border: 3px solid cyan;
+  animation: glow 2s infinite alternate;
+}
+
+.plans {
+  grid-area: plans;
+}
+
+/* 📱 Mobile Layout: Stacks elements when screen width is below 768px */
+@media (max-width: 1024px) {
+  .container {
+      display: grid;
+      width: 100%;  /* Ensure container spans the full width */
+      grid-template-columns: 1fr; /* Allows full-width sections */
+      grid-template-rows: 100px;
+      grid-template-areas: 
+          "nav"
+          "title"
+          "days-together"
+          "main"
+          "plans";
+      overflow: scroll;
+  }
+  
+  .nav {
+    height: 100px;
+    width: 100%; /* Ensure nav takes full width */
+    display: block; /* Ensures it behaves as a full-width block */
+  }
+
+  .title{
+    height: 100px;
+    width: 100%; /* Ensure nav takes full width */
+    display: block; /* Ensures it behaves as a full-width block */
+  }
+}
