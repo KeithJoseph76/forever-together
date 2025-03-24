@@ -126,4 +126,7 @@
   .display-container {
     flex-direction: column;
   }
+
+  .boxes{
+    display:none;
 }
