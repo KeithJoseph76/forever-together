@@ -165,6 +165,6 @@
 /* Allow more items on larger screens */
 @media (min-width: 1024px) {
   .checklist {
-    max-height: calc(5 * 70px); /* Allow it to take full height */
+    max-height: calc(8 * 70px); /* Allow it to take full height */
   }
 }
