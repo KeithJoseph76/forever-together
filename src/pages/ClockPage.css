@@ -131,12 +131,4 @@ html, body {
   }
 }
 
-@media (max-width: 460px){
-  .clock-1 {
-    background-image: url('./clock-1.png');
-    background-size: contain; /* Ensures the whole image fits */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-}
-}
 
