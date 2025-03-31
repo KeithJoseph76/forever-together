@@ -24,7 +24,6 @@
   height: 80%;
   width: 70%;
   border-radius: 15px;
-  background-color: plum;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +125,13 @@
   .display-container {
     flex-direction: column;
   }
+}
 
+@media (max-width:600px){
+  .tv{
+    margin-right: 45px;
+  }
   .boxes{
-    display:none;
+      display: none;
+    }
 }

@@ -13,6 +13,7 @@
   position: relative;
   height: 99.5%;
   width: 100%;
+  max-height: 99.5%;
   display: flex;
   flex-direction: column; 
 }
@@ -25,7 +26,6 @@
   text-align: center;
   margin-bottom: 10px;
 }
-
 
 .checklist { /* Makes it take full available space */
   width: 100%;

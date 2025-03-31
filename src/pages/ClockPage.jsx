@@ -1,14 +1,23 @@
-import React from 'react';
-import './ClockPage.css'; // Import CSS
+import React from "react";
+import "./ClockPage.css"; // Import CSS
+import Navbar from "../components/Navbar";
+import DigitalClock from "../components/DigitalClock"; // Import DigitalClock component
+import CountdownTimer from "../components/CountdownTimer";
 
-const Clock = () => {
+const ClockPage = () => {
   return (
-    <div className="clock-page">
-      <h1> Clock Page</h1>
+    <div className="clock-container">
+      <div className="clock-nav"><Navbar/></div>
+      <div className="clock-main">
+        <div className="clock-section clock-1">
+          <DigitalClock startDate="2024-12-08T00:00:00" label="Hours Passed Since Dec 8, 2024" />
+        </div>
+        <div className="clock-section clock-2">
+          <CountdownTimer targetDate="2033-12-31T00:00:00" label="Countdown to Dec 31, 2033" />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Clock;
-
-// 8 December 2024 - 8:42pm
+export default ClockPage;

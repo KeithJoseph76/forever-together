@@ -7,7 +7,6 @@ const Plans = () => {
     { id: 2, text: "Amusement Park", completed: false },
     { id: 3, text: "One Day Together", completed: false },
     { id: 4, text: "Majnu Ka Tilla", completed: false },
-    { id: 5, text: "Jama Masjid", completed: false }
   ]);
 
   const toggleCompleted = (id) => {
